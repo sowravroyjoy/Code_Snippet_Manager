@@ -11,7 +11,7 @@ This program helps a developer to save code snippets that he use frequently with
 sqlite3 *db;
 sqlite3_stmt *stmt;
 int result;
-
+void connection();
 
 void printMenu() {
     cout << "Welcome to My Code Snippet Manager " <<endl;
