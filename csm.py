@@ -1,8 +1,15 @@
+"""
+copyright 2023
+author: Sowrav Roy Joy
+This program allows developers to add, delete, 
+modify, and view their code which they use frequently.
+"""
+
 import csmconnection, csmoperations
 
 
 if __name__ == "__main__":
-    # Initialize the database connection
+    # Initializing the database connection
     conn = csmconnection.initialize_database()
 
     while True:
@@ -36,5 +43,5 @@ if __name__ == "__main__":
         else:
             print("Invalid choice. Please try again.")
 
-    # Close the database connection when the program exits
+    # Closing the database connection
     conn.close()
