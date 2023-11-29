@@ -18,8 +18,6 @@ As the options suggest,
 
 To compile and run, you have to go that folder where the main file 'csm.py' and other files are situated and run the statement in the terminal "python3 csm.py". That will be it.
 
-Challenges: 
-
 Future enhancements:
 1. Add chatGPT to get access to code snippets that are not saved yet in the storage.
 2. Add an online storage to increase the storage and get an option to access the saved code snippets from any other devices.
