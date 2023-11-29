@@ -1,3 +1,9 @@
+"""
+copyright 2023
+author: Sowrav Roy Joy
+This file includes the connection function to the database and the imports needed for the program
+"""
+
 import sqlite3, pyperclip
 
 def connection():

@@ -1,4 +1,8 @@
-
+"""
+copyright 2023
+author: Sowrav Roy Joy
+This file includes all the operation functions
+"""
 
 def copy_clipboard(con, id, func):
     # selecting the coding snippet to copy

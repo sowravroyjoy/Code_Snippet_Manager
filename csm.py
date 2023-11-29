@@ -1,8 +1,9 @@
 """
 copyright 2023
 author: Sowrav Roy Joy
-This program allows developers to add, delete, 
-modify, and view their code which they use frequently.
+This is the main program file and
+it allows developers to add, delete, 
+modify, view, and copy their code snippets which they use frequently.
 """
 
 import csmconnection, csmoperations
