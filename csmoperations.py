@@ -1,7 +1,7 @@
 
 
 def copy_clipboard(con, id, func):
-    # selecting the coding snippet to display
+    # selecting the coding snippet to copy
     cursor = con.execute('SELECT title, code FROM snippets WHERE id = ?', (id,))
     row = cursor.fetchone()
     if row:
