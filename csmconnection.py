@@ -1,4 +1,4 @@
-import sqlite3
+import sqlite3, pyperclip
 
 def connection():
     # conecting to the database or creating it if not exists

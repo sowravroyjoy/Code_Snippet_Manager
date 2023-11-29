@@ -13,41 +13,46 @@ if __name__ == "__main__":
     con = csmconnection.connection()
 
     while True:
-        print("\n1. View a snippet")
-        print("2. Add a new one manually")
-        print("3. Add a new one from a file")
-        print("4. Add a existing one to a file")
-        print("5. Delete an existing one")
-        print("6. Modify an existing one")
-        print("7. View all the snippet")
-        print("8. Exit")
+        print("\n\t WELCOME TO CODE SNIPPET MANAGER - a tool only for developers\n")
+
+        print("1. Copy a snippet")
+        print("2. View a snippet")
+        print("3. Add a new one manually")
+        print("4. Add a new one from a file")
+        print("5. Add a existing one to a file")
+        print("6. Delete an existing one")
+        print("7. Modify an existing one")
+        print("8. View all the snippet")
+        print("9. Exit")
 
         choice = input("Enter your choice: ")
-
         if choice == "1":
+            id = input("Enter ID to copy: ")
+            csmoperations.copy_clipboard(con, id, csmconnection.pyperclip)
+        elif choice == "2":
             id = input("Enter ID to view: ")
             csmoperations.view(con, id)
-        elif choice == "2":
+        elif choice == "3":
             title = input("Enter title: ")
             code = input("Enter code:\n")
             csmoperations.add(con, title, code)
-        elif choice == "3":
+        elif choice == "4":
             file_name = input("Enter filename:\n")
             csmoperations.add_from_file(con, file_name)
-        elif choice == "4":
+        elif choice == "5":
             id = input("Enter ID to copy: ")
             file_name = input("Enter filename:\n")
             csmoperations.copy_to_file(con, file_name, id)
-        elif choice == "5":
+        elif choice == "6":
             id = input("Enter ID to delete: ")
             csmoperations.delete(con, id)
-        elif choice == "6":
+        elif choice == "7":
             id = input("Enter ID to update: ")
             csmoperations.update(con, id)
-        elif choice == "7":
-            csmoperations.list(con)
         elif choice == "8":
-            print("Bye")
+            csmoperations.list(con)
+        elif choice == "9":
+            print("Bye. See you again!!")
             break
         else:
             print("Invalid choice. Please try again.")

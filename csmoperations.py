@@ -1,4 +1,15 @@
 
+
+def copy_clipboard(con, id, func):
+    # selecting the coding snippet to display
+    cursor = con.execute('SELECT title, code FROM snippets WHERE id = ?', (id,))
+    row = cursor.fetchone()
+    if row:
+        func.copy(row[1])
+        print(f"Code copied successfully.")
+    else:
+        print("Not found.")
+
 def view(con, id):
     # selecting the coding snippet to display
     cursor = con.execute('SELECT title, code FROM snippets WHERE id = ?', (id,))
@@ -106,4 +117,3 @@ def copy_to_file(con, filename, id):
         print("Not found.")
 
 
-    
